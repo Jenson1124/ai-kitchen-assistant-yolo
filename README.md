@@ -33,27 +33,27 @@ This project demonstrates the integration of:
 
 ## System Architecture
 
-
+```
 Mobile App (React Native)
-│
-│ Upload Image
-▼
+        │
+        │ Upload Image
+        ▼
 Flask Backend API
-│
-│ YOLOv8 Model Inference
-▼
+        │
+        │ YOLOv8 Model Inference
+        ▼
 Vegetable Detection
-│
-│ Extract Ingredients
-▼
+        │
+        │ Extract Ingredients
+        ▼
 Groq LLM API
-│
-▼
+        │
+        ▼
 Recipe Generation
-│
-▼
+        │
+        ▼
 Recipe Returned to Mobile App
-
+```
 
 ---
 
@@ -63,7 +63,7 @@ The vegetable detection model was trained using the **YOLOv8 object detection ar
 
 ### Dataset
 - Dataset created and annotated using **Roboflow**
-- Contains **multiple vegetable classes**
+- Contains multiple vegetable classes
 
 Example classes include:
 
@@ -80,10 +80,10 @@ Example classes include:
 
 To improve model generalization, the following augmentation techniques were applied:
 
-- Image flipping
-- Scaling
-- Rotation
-- Random transformations
+- Image flipping  
+- Scaling  
+- Rotation  
+- Random transformations  
 
 ### Training Approach
 
@@ -99,9 +99,9 @@ During inference the model detects:
 
 The trained model weights are stored in:
 
-
+```
 backend/best.pt
-
+```
 
 ---
 
@@ -129,25 +129,25 @@ backend/best.pt
 
 ## Project Structure
 
-
+```
 ai-kitchen-assistant-yolo
 │
 ├── backend
-│ ├── app.py
-│ ├── inspect_model.py
-│ ├── best.pt
-│ ├── img.jpg
-│ └── runs
+│   ├── app.py
+│   ├── inspect_model.py
+│   ├── best.pt
+│   ├── img.jpg
+│   └── runs
 │
 ├── EzuraSense
-│ ├── src
-│ ├── assets
-│ ├── package.json
-│ └── app.json
+│   ├── src
+│   ├── assets
+│   ├── package.json
+│   └── app.json
 │
 ├── README.md
 └── .gitignore
-
+```
 
 ---
 
@@ -158,55 +158,90 @@ ai-kitchen-assistant-yolo
 ```bash
 git clone https://github.com/Jenson1124/ai-kitchen-assistant-yolo.git
 cd ai-kitchen-assistant-yolo
-2. Create Python Environment
+```
+
+### 2. Create Python Environment
+
+```bash
 python -m venv venv
+```
 
 Activate environment:
 
-Windows
+**Windows**
 
+```bash
 venv\Scripts\activate
-3. Install Backend Dependencies
+```
+
+### 3. Install Backend Dependencies
+
+```bash
 pip install -r requirements.txt
-4. Run Flask Backend
+```
+
+### 4. Run Flask Backend
+
+```bash
 cd backend
 python app.py
-5. Run Mobile Application
+```
+
+### 5. Run Mobile Application
+
+```bash
 cd EzuraSense
 npm install
 npx expo start
-Example Workflow
-User uploads an image of vegetables using the mobile application.
-The image is sent to the Flask backend.
-The YOLOv8 model detects vegetables present in the image.
-The detected ingredient list is sent to the Groq API.
-The LLM generates a recipe using the detected vegetables.
-The recipe is returned and displayed in the mobile app.
-Machine Learning Concepts Demonstrated
+```
+
+---
+
+## Example Workflow
+
+1. User uploads an image of vegetables using the mobile application.
+2. The image is sent to the Flask backend.
+3. The YOLOv8 model detects vegetables present in the image.
+4. The detected ingredient list is sent to the Groq API.
+5. The LLM generates a recipe using the detected vegetables.
+6. The recipe is returned and displayed in the mobile app.
+
+---
+
+## Machine Learning Concepts Demonstrated
 
 This project demonstrates several core AI/ML concepts:
 
-Supervised Learning
-Object Detection
-Convolutional Neural Networks (CNNs)
-Transfer Learning
-Model Evaluation Metrics
-Precision
-Recall
-Mean Average Precision (mAP)
-Future Improvements
-Add real-time camera detection
-Improve dataset with more vegetable classes
-Add multiple recipe suggestions
-Integrate nutrition analysis
-Deploy backend using cloud services
-Author
+- Supervised Learning  
+- Object Detection  
+- Convolutional Neural Networks (CNNs)  
+- Transfer Learning  
+- Model Evaluation Metrics  
+  - Precision  
+  - Recall  
+  - Mean Average Precision (mAP)
 
-Jenson Antony
+---
 
-GitHub:
+## Future Improvements
+
+- Add real-time camera detection
+- Improve dataset with more vegetable classes
+- Add multiple recipe suggestions
+- Integrate nutrition analysis
+- Deploy backend using cloud services
+
+---
+
+## Author
+
+**Jenson Antony**
+
+GitHub:  
 https://github.com/Jenson1124
 
-License
+---
+
+## License
 
 This project is created for educational and research purposes.
