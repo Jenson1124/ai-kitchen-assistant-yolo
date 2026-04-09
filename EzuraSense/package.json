@@ -1,0 +1,38 @@
+{
+  "name": "ezurasense",
+  "version": "1.0.0",
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@expo/ngrok": "^4.1.0",
+    "@react-native-async-storage/async-storage": "2.1.2",
+    "axios": "^1.9.0",
+    "expo": "~53.0.9",
+    "expo-camera": "~16.1.6",
+    "expo-constants": "~17.1.6",
+    "expo-font": "~13.3.1",
+    "expo-image-picker": "~16.1.4",
+    "expo-linking": "~7.1.5",
+    "expo-router": "~5.1.10",
+    "expo-status-bar": "~2.2.3",
+    "lottie-react-native": "7.2.2",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "react-native": "0.79.2",
+    "react-native-safe-area-context": "5.4.0",
+    "react-native-screens": "~4.11.1",
+    "react-native-web": "^0.20.0",
+    "@expo/metro-runtime": "~5.0.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@types/react": "~19.0.10",
+    "typescript": "~5.8.3"
+  },
+  "private": true
+}

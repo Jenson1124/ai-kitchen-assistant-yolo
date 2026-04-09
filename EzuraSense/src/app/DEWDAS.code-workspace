@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../../.."
+		},
+		{
+			"path": "../../../../../../DEWDAS1/home_automation_backend"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "home_automation_backend"
+	}
+}
